@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
 
+@Repository
 public class EmployeeDaoImpl implements EmployeeDao {
 
     private final JdbcTemplate jdbcTemplate;
