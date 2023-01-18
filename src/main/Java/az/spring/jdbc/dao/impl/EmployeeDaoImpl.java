@@ -4,9 +4,11 @@ import az.spring.jdbc.dao.EmployeeDao;
 import az.spring.jdbc.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class EmployeeDaoImpl implements EmployeeDao {
 
     private final JdbcTemplate jdbcTemplate;
@@ -43,6 +45,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
     @Override
     public long count() {
-        return 0;
+        String query = "select count(*) from employee";
+        return jdbcTemplate.queryForObject(query,Long.class);
     }
 }
