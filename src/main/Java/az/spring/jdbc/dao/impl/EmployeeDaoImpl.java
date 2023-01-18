@@ -44,6 +44,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
     @Override
     public long count() {
-        return 0;
+                String query = "select count(*) from employee";
+        return jdbcTemplate.queryForObject(query,Long.class);
     }
 }
