@@ -3,7 +3,7 @@ package az.spring.jdbc.model;
 public class Employee {
     private int id;
     private String name;
-    private String  surname;
+    private String surname;
     private int age;
     private double salary;
 
